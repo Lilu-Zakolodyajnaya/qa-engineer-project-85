@@ -1,0 +1,181 @@
+---
+- summary: |
+    Проверка работы сайта в мобильной версии
+  requirement: |
+    При выборе различных вариантов мобильных устройств должен корректно отображаться весь интерфейс
+  prerequisites: |
+    Открыта главная страница
+  test-data: |
+    Тестовые данные
+    https://codebattle.hexlet.io/
+  steps:
+    - С помощью DevTools выбираем различные версии мобильных устройств
+  expected-result: |
+    Интерфейс сайта адаптируется под различные версии устройств
+
+- summary: |
+    Проверка регистрации нового пользователя на сайте
+  requirement: |
+    Успешная регистрация нового пользователя
+  prerequisites: |
+    Открыта главная страница
+  test-data: |
+    Тестовые данные
+    https://codebattle.hexlet.io/
+    Nickname = user Email = user@gmail.com Password = password
+  steps:
+    - Выбираем в правом верхнем углу кнопку "Sign up"
+    - Вводим логин
+    - Вводим email
+    - Вводим пароль
+    - Вводим повторно пароль
+    - Нажимаем кнопку «Submit»
+  expected-result: |
+    Авторизация произведена успешно
+
+- summary: |
+    Проверка авторизации пользователя на сайте с помощью email  и пароль 
+  requirement: |
+    Успешная авторизация пользователя 
+  prerequisites: |
+    Открыта главная страница
+  test-data: |
+    Тестовые данные
+    https://codebattle.hexlet.io/
+    Nickname = user Email = user@gmail.com Password = password
+  steps:
+    - Выбираем в правом верхнем углу кнопку "Sign in"
+    - Вводим email
+    - Вводим пароль
+    - Нажимаем кнопку «Submit»
+  expected-result: |
+    Произведен успешный вход
+
+- summary: |
+    Проверка авторизации пользователя на сайте через Github
+  requirement: |
+    Успешная авторизация пользователя
+  prerequisites: |
+    Открыта главная страница
+  test-data: |
+    Тестовые данные
+    https://codebattle.hexlet.io/
+    Email = user@gmail.com Password = password
+  steps:
+    - Выбираем кнопку "Sign in"
+    - Нажимаем кнопку "Sign in with Github"
+  expected-result: |
+    Произведен успешный вход
+
+- summary: |
+    Проверка авторизации пользователя через Discord
+  requirement: |
+    Успешная авторизация пользователя
+  prerequisites: |
+    Открыта главная страница
+  test-data: |
+    Тестовые данные
+    https://codebattle.hexlet.io/
+  steps:
+    - Выбираем кнопку "Sign in"
+    - Нажимаем кнопку "Sign in with Discord"
+  expected-result: |
+    Произведен успешный вход
+
+- summary: |
+    Проверка возможности изменения настроек пользователя
+  requirement: |
+    Успешная смена настроек
+  prerequisites: |
+    Открыта страница настроек
+  test-data: |
+    Тестовые данные
+    https://codebattle.hexlet.io/settings
+  steps:
+    - Меняем имя
+    - Меняем оружие
+    - Меняем настройки звука
+    - Сохраняем изменения
+    - Обновляем страницу
+  expected-result: |
+    Произведена смена настроек
+
+- summary: |
+    Проверка возможности создания игры с ботом
+  requirement: |
+    Возможность создания игры с ботом
+  prerequisites: |
+    Открыта страница авторизованого пользователя
+  test-data: |
+    Тестовые данные
+    https://codebattle.hexlet.io/#lobby
+  steps:
+    - Нажимаем "Create a game"
+    - Выбираем "With a bot"
+    - Нажимаем "Create battle"
+  expected-result: |
+    Создана игра с ботом
+
+- summary: |
+    Проверка возможности создания игры с другом
+  requirement: |
+    Возможность создания игры с другом
+  prerequisites: |
+    Открыта страница авторизованого пользователя
+  test-data: |
+    Тестовые данные
+    https://codebattle.hexlet.io/#lobby
+  steps:
+    - Нажимаем "Create a game"
+    - Выбираем "With a friend"
+    - Выбираем соперника в поле "Choose opponent"
+    - Нажимаем "Create invite"
+  expected-result: |
+    Создана игра с другом
+
+- summary: |
+    Проверка возможности отмены приглашения в игру
+  requirement: |
+    Возможность отмены приглашения в игру
+  prerequisites: |
+    Открыта страница авторизованого пользователя
+  test-data: |
+    Тестовые данные
+    https://codebattle.hexlet.io/#lobby
+  steps:
+    - Нажимаем мечи
+    - Выбираем "Cancel"
+  expected-result: |
+    Приглашение играть отменено
+
+- summary: |
+    Проверка возможности отправки сообщения в чат
+  requirement: |
+    Возможность общения в чате
+  prerequisites: |
+    Открыта страница авторизованого пользователя
+  test-data: |
+    Тестовые данные
+    https://codebattle.hexlet.io/#lobby
+  steps:
+    - Набираем в поле ввода сообщения текст
+    - Выбираем "Send"
+  expected-result: |
+    Сообщение появляется в чате
+
+- summary: |
+    Проверка возможности регистрации с несуществующим email
+  requirement: |
+    Невозможность регистрации с несуществующим email
+  prerequisites: |
+    Открыта страница авторизации
+  test-data: |
+    Тестовые данные
+    https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+    Nickname = dan123 Email = test_123@test.com Password = 123123
+  steps:
+    - Вводим логин, email, password
+    - Нажимаем кнопку «Submit»
+  expected-result: |
+    Появляется предупреждение о необходимости проверки подтверждающего письма через email
+
