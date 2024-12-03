@@ -207,6 +207,8 @@
   test-data: |
     Тестовые данные
     https://codebattle.hexlet.io/games/
+  steps:
+    - Набираем код в поле слева
   expected-result: |
     Игрок видит оба поля игры  
 
