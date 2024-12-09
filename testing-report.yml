@@ -44,6 +44,10 @@
   status: pass
 
 - summary: |
+    Проверка возможности выбора продолжительности игры
+  status: pass
+
+- summary: |
     Проверка возможности выбора языка в задаче
   status: pass
 
@@ -52,11 +56,35 @@
   status: pass
 
 - summary: |
+    Проверка победы в игре
+  status: pass
+
+- summary: |
+    Проверка поражения в батле
+  status: pass
+
+- summary: |
+    Во время игры можно совершить проверку решения
+  status: pass
+
+- summary: |
+    Проверка возможности ничьей в батле
+  status: pass
+
+- summary: |
     Проверка возможности сдаться во время игры
   status: pass
 
 - summary: |
-    Проверка возможности сортировиа по rating в разделах Weekly и Mounthly
+    Проверка возможности смены фона в окне ввода кода
+  status: pass
+  
+- summary: |
+    Проверка возможности сброса решения
+  status: pass
+
+- summary: |
+    Проверка возможности сортировки по rating в разделах Weekly и Mounthly
   status: fail
 
 - summary: |
